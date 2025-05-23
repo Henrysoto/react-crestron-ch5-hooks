@@ -44,17 +44,17 @@
         "commit": "git-cz",
         "pretty:fix": "prettier --write .",
         "resolve:crcomlib": "run-script-os",
-        "resolve:crcomlib:default": "./node_modules/node-jq/bin/jq '.main=\"build_bundles/cjs/cr-com-lib.js\"' $npm_package_crestron_crcomlib_packageJson | sponge $npm_package_crestron_crcomlib_packageJson",
-        "resolve:crcomlib:windows": "./node_modules/node-jq/bin/jq \".main=\"\"build_bundles/cjs/cr-com-lib.js\"\"\" %npm_package_crestron_crcomlib_packageJson% | sponge %npm_package_crestron_crcomlib_packageJson%",
+        "resolve:crcomlib:default": "./node_modules/node-jq/bin/jq '.main=\"build_bundles/cjs/cr-com-lib.js\"' ./node_modules/@crestron/ch5-crcomlib/package.json | sponge ./node_modules/@crestron/ch5-crcomlib/package.json",
+        "resolve:crcomlib:windows": "./node_modules/node-jq/bin/jq \".main=\"\"build_bundles/cjs/cr-com-lib.js\"\"\" ./node_modules/@crestron/ch5-crcomlib/package.json | sponge ./node_modules/@crestron/ch5-crcomlib/package.json",
         "doctoc": "doctoc --title '## Contents 📖' README.md",
         "contrib:add": "all-contributors add",
         "contrib:generate": "all-contributors generate",
         "contrib:check": "all-contributors check"
     },
     "peerDependencies": {
-        "@crestron/ch5-crcomlib": "^1.2.0",
+        "@crestron/ch5-crcomlib": "^2.13.0",
         "@norgate-av/crestron-ch5-helper": "^1.1.0",
-        "react": ">=16"
+        "react": ">=19"
     },
     "size-limit": [
         {
@@ -69,7 +69,7 @@
     "devDependencies": {
         "@commitlint/cli": "^18.6.1",
         "@commitlint/config-conventional": "^18.6.2",
-        "@crestron/ch5-crcomlib": "^1.2.0",
+        "@crestron/ch5-crcomlib": "^2.13.0",
         "@norgate-av/crestron-ch5-helper": "^2.0.0",
         "@semantic-release/changelog": "^6.0.1",
         "@semantic-release/git": "^10.0.1",
@@ -96,8 +96,8 @@
         "lint-staged": "^15.2.2",
         "node-jq": "^4.3.0",
         "prettier": "^3.2.5",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
         "rimraf": "^5.0.5",
         "run-script-os": "^1.1.6",
         "semantic-release": "^23.0.2",
